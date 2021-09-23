@@ -19,5 +19,13 @@ public class Main {
         Guerreiro guerreiro1 = new Guerreiro("Hurin",7500,90);
         mago1.receberDano(guerreiro1.aplicarDano());
         System.out.println("Vida do Mago: " + mago1.getVida());
+
+        //testando métodos da classe Inimigo
+        Inimigo inimigo1 = new Inimigo("Melkor",10000);
+        System.out.println("Nome: " + inimigo1.getNome());
+        inimigo1.trocarNome("Sauron");
+        System.out.println("Nome: " + inimigo1.getNome());
+        inimigo1.receberDano(200);
+        System.out.println("Vida: " + inimigo1.exibirVida());
     }
 }
