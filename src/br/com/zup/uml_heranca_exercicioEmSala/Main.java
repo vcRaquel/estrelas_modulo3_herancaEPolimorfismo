@@ -32,5 +32,10 @@ public class Main {
         Rasteiro rasteiro1 = new Rasteiro("Língua de Cobra", 5000,57);
         inimigo1.receberDano(rasteiro1.aplicarDano());
         System.out.println("A vida do inimigo: " + inimigo1.getVida());
+
+        //testando métodos classe Voador
+        Voador voador1 = new Voador("Nazgul", 1000,80);
+        rasteiro1.receberDano(voador1.aplicarDano());
+        System.out.println("Vida do rasteiro: " + rasteiro1.getVida());
     }
 }
