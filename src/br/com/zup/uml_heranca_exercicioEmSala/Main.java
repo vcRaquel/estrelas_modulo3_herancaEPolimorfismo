@@ -14,5 +14,10 @@ public class Main {
         Mago mago1 = new Mago("Saruman",8000,94);
         heroi1.receberDano(mago1.aplicarMagia());
         System.out.println("Vida do herói: " + heroi1.getVida());
+
+        //testando métodos da classe guerreiro
+        Guerreiro guerreiro1 = new Guerreiro("Hurin",7500,90);
+        mago1.receberDano(guerreiro1.aplicarDano());
+        System.out.println("Vida do Mago: " + mago1.getVida());
     }
 }
