@@ -10,6 +10,9 @@ public class Main {
         heroi1.receberDano(200);
         System.out.println("Vida: " + heroi1.exibirVida());
 
-
+        //testando métodos da classe Mago
+        Mago mago1 = new Mago("Saruman",8000,94);
+        heroi1.receberDano(mago1.aplicarMagia());
+        System.out.println("Vida do herói: " + heroi1.getVida());
     }
 }
