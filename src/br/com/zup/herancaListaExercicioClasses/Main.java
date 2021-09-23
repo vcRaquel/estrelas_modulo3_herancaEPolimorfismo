@@ -10,5 +10,9 @@ public class Main {
         Colaborador colaborador1 = new Colaborador("Maia", "Rua seilá, n 4, de sei lá onde", "32145687", 3,2000,50);
         System.out.println("O salário líquido do colaborador é: RS " + colaborador1.calcularSalario());
 
+        //testando método calcularSalario da classe Administrador por sobrescrição
+        Administrador administrador1 = new Administrador("Maia", "Rua seilá, n 4, de sei lá onde", "32145687", 3,2000,50,100);
+        System.out.println("O salário líquido do Administrador é: RS " + administrador1.calcularSalario());
+
     }
 }
