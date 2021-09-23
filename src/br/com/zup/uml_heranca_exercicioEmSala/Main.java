@@ -26,6 +26,11 @@ public class Main {
         inimigo1.trocarNome("Sauron");
         System.out.println("Nome: " + inimigo1.getNome());
         inimigo1.receberDano(200);
-        System.out.println("Vida: " + inimigo1.exibirVida());
+        System.out.println("Vida do inimigo: " + inimigo1.exibirVida());
+
+        //testando métodos da classe Rasteiro
+        Rasteiro rasteiro1 = new Rasteiro("Língua de Cobra", 5000,57);
+        inimigo1.receberDano(rasteiro1.aplicarDano());
+        System.out.println("A vida do inimigo: " + inimigo1.getVida());
     }
 }
