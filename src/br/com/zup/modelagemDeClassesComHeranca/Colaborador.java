@@ -1,6 +1,6 @@
 package br.com.zup.modelagemDeClassesComHeranca;
 
-public class Colaboradores {
+public class Colaborador {
     private String nome;
     private String cpf;
     private String numeroRegistro;
@@ -9,11 +9,11 @@ public class Colaboradores {
 
     //Métodos construtores
 
-    public Colaboradores() {
+    public Colaborador() {
 
     }
 
-    public Colaboradores(String nome, String cpf, String numeroRegistro, String orgaoLotacao, double salario) {
+    public Colaborador(String nome, String cpf, String numeroRegistro, String orgaoLotacao, double salario) {
         this.nome = nome;
         this.cpf = cpf;
         this.numeroRegistro = numeroRegistro;
