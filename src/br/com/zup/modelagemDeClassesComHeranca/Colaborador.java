@@ -58,5 +58,10 @@ public class Colaborador {
         this.salario = salario;
     }
 
-
+    //Métodos:
+    //aumentoSalario: para todos aumenta o salário em 10%;
+    public void aumentoSalario(){
+        double salarioAtualizado = (getSalario() * 0.1) + getSalario();
+        setSalario(salarioAtualizado);
+    }
 }

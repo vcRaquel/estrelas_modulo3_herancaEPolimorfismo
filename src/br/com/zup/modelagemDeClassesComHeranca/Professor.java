@@ -51,5 +51,5 @@ public class Professor extends Colaborador {
     }
 
     //Métodos
-
+    //adicionaTurma: para os professores.
 }
