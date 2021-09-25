@@ -52,4 +52,7 @@ public class Professor extends Colaborador {
 
     //Métodos
     //adicionaTurma: para os professores.
+    public void adicionaTurma(){
+        this.quantidadeTurmas += 1;
+    }
 }
