@@ -18,11 +18,10 @@ public class Professor extends Colaborador {
 
     }
 
-    public Professor(String nome, String cpf, String numeroRegistro, String orgaoLotacao, double salario, String nivelGraduacao, String disciplina, int quantidadeAlunos) {
+    public Professor(String nome, String cpf, String numeroRegistro, String orgaoLotacao, double salario, String nivelGraduacao, String disciplina) {
         super(nome, cpf, numeroRegistro, orgaoLotacao, salario);
         this.nivelGraduacao = nivelGraduacao;
         this.disciplina = disciplina;
-        this.quantidadeAlunos = quantidadeAlunos;
     }
 
     //Getters e Setters
@@ -78,6 +77,16 @@ public class Professor extends Colaborador {
         this.turmas[contador] = novaturma;
         contador++;
         adicionaTurma();
+        recalculaNumeroAlunos();
+    }
+
+    //método para recalcular a quantidade de Alunos
+    public void recalculaNumeroAlunos() {
+        int numeroAlunos = 0;
+        for (int indice = 0; indice < contador; indice++) {
+            numeroAlunos += turmas[indice].getQtdAlunos();
+        }
+        setQuantidadeAlunos(numeroAlunos);
     }
 
     public void mostraDados() {
