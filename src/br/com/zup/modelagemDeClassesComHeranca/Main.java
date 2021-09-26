@@ -12,5 +12,11 @@ public class Main {
         System.out.println(coordenador1.getSalario());
         coordenador1.aumentoSalario();
         System.out.println(coordenador1.getSalario());
+
+        Turma turma1 = new Turma(10,"quinto ano","5b");
+        professor1.registraTurma(turma1);
+        professor1.mostraDados();
+
+        coordenador1.getProfessoresSupervisionados();
     }
 }

@@ -1,10 +1,15 @@
 package br.com.zup.modelagemDeClassesComHeranca;
 
+import java.sql.Array;
+import java.util.Arrays;
+
 public class Professor extends Colaborador {
     private String nivelGraduacao;
     private String disciplina;
     private int quantidadeAlunos;
     private int quantidadeTurmas;
+    private Turma turmas[] = new Turma [5];
+    private int contador = 0;
 
     //Métodos construtores
 
@@ -54,5 +59,25 @@ public class Professor extends Colaborador {
     //adicionaTurma: para os professores.
     public void adicionaTurma(){
         this.quantidadeTurmas += 1;
+    }
+
+    //método pra adicionar uma turma na lista
+    public void registraTurma(Turma novaturma) {
+        this.turmas[contador] = novaturma;
+        contador++;
+        adicionaTurma();
+    }
+
+    public void mostraDados(){
+        System.out.println("O nome" + getNome());
+        System.out.println("O CPF" + getCpf());
+        System.out.println("O n de registro" + getNumeroRegistro());
+        System.out.println("O órgão de lotação" + getOrgaoLotacao());
+        System.out.println("O salário R$" + getSalario());
+        System.out.println("O nível de graduação" + this.nivelGraduacao);
+        System.out.println("A disciplina" + this.disciplina);
+        System.out.println("A quantidade de alunos" + this.quantidadeAlunos);
+        System.out.println("A quantidade de turmas" + this.quantidadeTurmas);
+        System.out.println("As turmas" + Arrays.toString(turmas)); // resolver o retorno para que exiba os dados e n a referência
     }
 }
