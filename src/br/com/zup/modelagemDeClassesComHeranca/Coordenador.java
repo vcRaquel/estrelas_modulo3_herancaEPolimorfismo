@@ -48,4 +48,26 @@ public class Coordenador extends Colaborador {
         setSalario(salarioAtualizado);
     }
 
+    //método para mostrar informações da lista professoresSupervisionados
+    public void mostraProfessoresSupervisionados() {
+        System.out.println("---------------------------------------------------------------------------");
+        System.out.println("Professores coordenados pelo(a) Coordenador(a) " + getNome() + " : ");
+        System.out.println("---------------------------------------------------------------------------");
+        for (int indice = 0; indice< contador; indice ++) {
+
+            System.out.println("Nome do professor: " + professoresSupervisionados[indice].getNome());
+            System.out.println("CPF: " + professoresSupervisionados[indice].getCpf());
+            System.out.println("Número de Registro: " + professoresSupervisionados[indice].getNumeroRegistro());
+            System.out.println("Orgao de Lotacao: " + professoresSupervisionados[indice].getOrgaoLotacao());
+            System.out.println("Salario: " + professoresSupervisionados[indice].getSalario());
+            System.out.println("Nível de Graduacao: " + professoresSupervisionados[indice].getNivelGraduacao());
+            System.out.println("Disciplina ministrada: " + professoresSupervisionados[indice].getDisciplina());
+            System.out.println("Quantidade de Alunos: " + professoresSupervisionados[indice].getQuantidadeAlunos());
+            System.out.println("Quantidade de Turmas: " + professoresSupervisionados[indice].getQuantidadeTurmas());
+            System.out.println("---------------------------------------------------------------------------");
+
+        }
+    }
+
+
 }

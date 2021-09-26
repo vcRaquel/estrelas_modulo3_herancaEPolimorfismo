@@ -17,6 +17,6 @@ public class Main {
         professor1.registraTurma(turma1);
         professor1.mostraDados();
 
-        coordenador1.getProfessoresSupervisionados();
+        coordenador1.mostraProfessoresSupervisionados();
     }
 }
