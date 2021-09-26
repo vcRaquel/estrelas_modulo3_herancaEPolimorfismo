@@ -4,8 +4,7 @@ public class Coordenador extends Colaborador {
     //    private List<Professor> professoresSupervisionados = new ArrayList<>();
     private int quantidadeProfessoresSupervisionados;
     private int contador = 0;
-    private Professor[] professoresSupervisionados = new Professor[5]; //precisa mostrar os dados e não só o identificador
-
+    private Professor[] professoresSupervisionados = new Professor[5];
     //Métodos construtores
 
     public Coordenador() {
@@ -53,8 +52,7 @@ public class Coordenador extends Colaborador {
         System.out.println("---------------------------------------------------------------------------");
         System.out.println("Professores coordenados pelo(a) Coordenador(a) " + getNome() + " : ");
         System.out.println("---------------------------------------------------------------------------");
-        for (int indice = 0; indice< contador; indice ++) {
-
+        for (int indice = 0; indice < contador; indice++) {
             System.out.println("Nome do professor: " + professoresSupervisionados[indice].getNome());
             System.out.println("CPF: " + professoresSupervisionados[indice].getCpf());
             System.out.println("Número de Registro: " + professoresSupervisionados[indice].getNumeroRegistro());
@@ -64,7 +62,17 @@ public class Coordenador extends Colaborador {
             System.out.println("Disciplina ministrada: " + professoresSupervisionados[indice].getDisciplina());
             System.out.println("Quantidade de Alunos: " + professoresSupervisionados[indice].getQuantidadeAlunos());
             System.out.println("Quantidade de Turmas: " + professoresSupervisionados[indice].getQuantidadeTurmas());
+            //mostrando a lista de turmas de cada professor
+            Turma turmas[] = professoresSupervisionados[indice].getTurmas();
+            for (int indiceb = 0; indiceb < professoresSupervisionados[indice].getQuantidadeTurmas(); indiceb++) {
+                System.out.println("================ TURMA " + (indiceb + 1) + ": ============================");
+                System.out.println("O nível da turma é: " + turmas[indiceb].getNivel());
+                System.out.println("O identificador da turma é: " + turmas[indiceb].getIdentificadorTurma());
+                System.out.println("A quantidade de alunos da turma é: " + turmas[indiceb].getQtdAlunos());
+                System.out.println("---------------------------------------------------------------------------");
+            }
             System.out.println("---------------------------------------------------------------------------");
+
 
         }
     }
