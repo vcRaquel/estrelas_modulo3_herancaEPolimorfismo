@@ -70,6 +70,7 @@ public class Imovel {
     public void inserirMorador(Morador novoMorador) {
         moradores.add(novoMorador);
     }
+
     //exibindo valor do aluguel, endereço, moradores, funcionário responsável
     @Override
     public String toString() {
@@ -82,17 +83,4 @@ public class Imovel {
 
         return imprimeImovel.toString();
     }
-//    public void mostraDadosImovel(){
-//        System.out.println("O Identificador do imóvel é:" + this.identificador);
-//        System.out.println("Endereço do imóvel: " + endereco);
-//        System.out.println("Funcionário responsável: " + funcionarioResponsavel);
-//        for(Morador referencia: moradores){
-//            System.out.println("Nome morador: " + referencia.getNome());
-//            System.out.println("CPF: " + referencia.getCpf());
-//            System.out.println("Telefone: " + referencia.getTelefone());
-//            System.out.println("Imóvel: " + referencia.getImovel());
-//            System.out.println("É o locatário: " + referencia.isLocatario());
-//            System.out.println("-------------------------------------------------");
-//        }
-//    }
 }

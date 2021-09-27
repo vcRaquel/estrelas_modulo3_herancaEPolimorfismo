@@ -40,7 +40,7 @@ public class Morador extends Pessoa {
         imprimeMorador.append("\n Telefone: " + getTelefone());
         imprimeMorador.append("\n Imóvel: " + imovel);
         imprimeMorador.append("\n Locatário: " + locatario);
-        imprimeMorador.append("------------------------------------------------------------");
+        imprimeMorador.append("\n------------------------------------------------------------\n");
 
 
         return imprimeMorador.toString();

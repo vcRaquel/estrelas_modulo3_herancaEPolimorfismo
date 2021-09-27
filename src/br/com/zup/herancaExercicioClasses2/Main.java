@@ -19,6 +19,11 @@ public class Main {
 
         Funcionario funcionario1 = new Funcionario("José","42423565","983735637", "78968756","Corretor");
         Imovel imovel1 = new Imovel("Jardim 123", "Jardim das flores 123", 2545.50,"José");
+        Imovel imovel2 = new Imovel("Jardim 300", "Jardim das flores 300", 2545.50,"Maria");
+        Catalogo catalogo1 = new Catalogo();
+        catalogo1.adicionaImovelNoCatalogo(imovel1);
+        catalogo1.adicionaImovelNoCatalogo(imovel2);
+        System.out.println(catalogo1);
 
         imovel1.inserirMorador(morador1);
         imovel1.inserirMorador(morador2);
