@@ -40,4 +40,15 @@ public class Pessoa {
     public void setTelefone(String telefone) {
         this.telefone = telefone;
     }
+
+    @Override
+    public String toString() {
+        StringBuilder imprimePessoa = new StringBuilder();
+        imprimePessoa.append("\n O nome do colaborador: " + getNome());
+        imprimePessoa.append("\n CPF: " + getCpf());
+        imprimePessoa.append("\n Telefone: " + getTelefone());
+        imprimePessoa.append("------------------------------------------------------------");
+
+        return imprimePessoa.toString();
+    }
 }

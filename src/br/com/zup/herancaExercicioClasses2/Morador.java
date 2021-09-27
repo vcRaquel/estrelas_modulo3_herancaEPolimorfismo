@@ -31,4 +31,20 @@ public class Morador extends Pessoa {
     public void setLocatario(boolean locatario) {
         this.locatario = locatario;
     }
+
+    @Override
+    public String toString() {
+        StringBuilder imprimeMorador = new StringBuilder();
+        imprimeMorador.append("\n O nome do morador: " + getNome());
+        imprimeMorador.append("\n CPF: " + getCpf());
+        imprimeMorador.append("\n Telefone: " + getTelefone());
+        imprimeMorador.append("\n Imóvel: " + imovel);
+        imprimeMorador.append("\n Locatário: " + locatario);
+        imprimeMorador.append("------------------------------------------------------------");
+
+
+        return imprimeMorador.toString();
+    }
 }
+
+

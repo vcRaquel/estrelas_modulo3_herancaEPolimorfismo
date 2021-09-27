@@ -71,16 +71,28 @@ public class Imovel {
         moradores.add(novoMorador);
     }
     //exibindo valor do aluguel, endereço, moradores, funcionário responsável
-    public void mostraDadosImovel(){
-        System.out.println("O Identificador do imóvel é:" + this.identificador);
-        System.out.println("Endereço do imóvel: " + endereco);
-        System.out.println("Funcionário responsável: " + funcionarioResponsavel);
-        for(Morador referencia: moradores){
-            System.out.println("Nome morador: " + referencia.getNome());
-            System.out.println("CPF: " + referencia.getCpf());
-            System.out.println("Telefone: " + referencia.getTelefone());
-            System.out.println("Imóvel: " + referencia.getImovel());
-            System.out.println("É o locatário: " + referencia.isLocatario());
-        }
+    @Override
+    public String toString() {
+        StringBuilder imprimeImovel = new StringBuilder();
+        imprimeImovel.append("\n O Identificador do imóvel é: " + getIdentificador());
+        imprimeImovel.append("\n Endereço do imóvel: " + getEndereco());
+        imprimeImovel.append("\n Funcionário responsável: " + getFuncionarioResponsavel());
+        imprimeImovel.append("\n Moradores: " + moradores);
+        imprimeImovel.append("------------------------------------------------------------");
+
+        return imprimeImovel.toString();
     }
+//    public void mostraDadosImovel(){
+//        System.out.println("O Identificador do imóvel é:" + this.identificador);
+//        System.out.println("Endereço do imóvel: " + endereco);
+//        System.out.println("Funcionário responsável: " + funcionarioResponsavel);
+//        for(Morador referencia: moradores){
+//            System.out.println("Nome morador: " + referencia.getNome());
+//            System.out.println("CPF: " + referencia.getCpf());
+//            System.out.println("Telefone: " + referencia.getTelefone());
+//            System.out.println("Imóvel: " + referencia.getImovel());
+//            System.out.println("É o locatário: " + referencia.isLocatario());
+//            System.out.println("-------------------------------------------------");
+//        }
+//    }
 }

@@ -15,11 +15,15 @@ package br.com.zup.herancaExercicioClasses2;
 public class Main {
     public static void main(String[] args) {
         Morador morador1 = new Morador("Caio", "1236547", "1236547", "Jardim 123", true);
+        Morador morador2 = new Morador("José", "1235447", "1236565", "Jardim 123", false);
+
         Funcionario funcionario1 = new Funcionario("José","42423565","983735637", "78968756","Corretor");
         Imovel imovel1 = new Imovel("Jardim 123", "Jardim das flores 123", 2545.50,"José");
 
         imovel1.inserirMorador(morador1);
-        imovel1.mostraDadosImovel();
+        imovel1.inserirMorador(morador2);
+        System.out.println(imovel1);
+
 
 
     }

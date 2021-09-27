@@ -32,4 +32,17 @@ public class Funcionario extends Pessoa{
     public void setFuncao(String funcao) {
         this.funcao = funcao;
     }
+
+    @Override
+    public String toString() {
+        StringBuilder imprimeFuncionario = new StringBuilder();
+        imprimeFuncionario.append("\n O nome do colaborador: " + getNome());
+        imprimeFuncionario.append("\n CPF: " + getCpf());
+        imprimeFuncionario.append("\n Telefone: " + getTelefone());
+        imprimeFuncionario.append("\n Carteira de trabalho: " + carteiraTrabalho);
+        imprimeFuncionario.append("\n Função: " + funcao);
+        imprimeFuncionario.append("------------------------------------------------------------");
+
+        return imprimeFuncionario.toString();
+    }
 }
