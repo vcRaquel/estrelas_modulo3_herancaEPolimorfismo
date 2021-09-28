@@ -7,7 +7,7 @@ public class Imovel {
     private String identificador;
     private String endereco;
     private double aluguel;
-    private String funcionarioResponsavel;
+    private Funcionario funcionarioResponsavel;
     List<Morador> moradores = new ArrayList<>();
 
     //Métodos construtores
@@ -16,7 +16,7 @@ public class Imovel {
 
     }
 
-    public Imovel(String identificador, String endereco, double aluguel, String funcionarioResponsavel) {
+    public Imovel(String identificador, String endereco, double aluguel, Funcionario funcionarioResponsavel) {
         this.identificador = identificador;
         this.endereco = endereco;
         this.aluguel = aluguel;
@@ -49,11 +49,11 @@ public class Imovel {
         this.aluguel = aluguel;
     }
 
-    public String getFuncionarioResponsavel() {
+    public Funcionario getFuncionarioResponsavel() {
         return funcionarioResponsavel;
     }
 
-    public void setFuncionarioResponsavel(String funcionarioResponsavel) {
+    public void setFuncionarioResponsavel(Funcionario funcionarioResponsavel) {
         this.funcionarioResponsavel = funcionarioResponsavel;
     }
 
@@ -61,9 +61,6 @@ public class Imovel {
         return moradores;
     }
 
-    public void setMoradores(List<Morador> moradores) {
-        this.moradores = moradores;
-    }
 
     //Métodos
     //Para inserir um morador na lista de moradores
@@ -75,10 +72,15 @@ public class Imovel {
     @Override
     public String toString() {
         StringBuilder imprimeImovel = new StringBuilder();
-        imprimeImovel.append("\n O Identificador do imóvel é: " + getIdentificador());
-        imprimeImovel.append("\n Endereço do imóvel: " + getEndereco());
-        imprimeImovel.append("\n Funcionário responsável: " + getFuncionarioResponsavel());
-        imprimeImovel.append("\n Moradores: " + moradores);
+        imprimeImovel.append("------------------------------------------------------------");
+        imprimeImovel.append("\n O Identificador do imóvel é: " + identificador);
+        imprimeImovel.append("\n Endereço do imóvel: " + endereco);
+        imprimeImovel.append("\n Valor do aluguel: " + aluguel);
+        imprimeImovel.append("\n -----------------Funcionário responsável: -------------------------");
+        imprimeImovel.append("\n " + funcionarioResponsavel);
+        imprimeImovel.append("----------------- Moradores: --------------------------");
+        imprimeImovel.append("\n Quantidade de moradores: " + moradores.size());
+        imprimeImovel.append("\n " + moradores);
         imprimeImovel.append("------------------------------------------------------------");
 
         return imprimeImovel.toString();

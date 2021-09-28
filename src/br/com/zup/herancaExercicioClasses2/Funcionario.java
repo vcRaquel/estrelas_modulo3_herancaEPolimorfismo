@@ -40,8 +40,8 @@ public class Funcionario extends Pessoa{
         imprimeFuncionario.append("\n CPF: " + getCpf());
         imprimeFuncionario.append("\n Telefone: " + getTelefone());
         imprimeFuncionario.append("\n Carteira de trabalho: " + carteiraTrabalho);
-        imprimeFuncionario.append("\n Função: " + funcao);
-        imprimeFuncionario.append("------------------------------------------------------------");
+        imprimeFuncionario.append("\n Função: " + funcao + "\n");
+        imprimeFuncionario.append("------------------------------------------------------------\n");
 
         return imprimeFuncionario.toString();
     }
