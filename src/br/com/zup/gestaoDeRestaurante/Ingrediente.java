@@ -2,7 +2,7 @@ package br.com.zup.gestaoDeRestaurante;
 
 public class Ingrediente {
     private String nomeIngrediente;
-    private double pesoEmGramas;
+    private String quantidadeIngrediente;
 
     //Método Construtor
 
@@ -10,9 +10,9 @@ public class Ingrediente {
 
     }
 
-    public Ingrediente(String nomeIngrediente, double pesoEmGramas) {
+    public Ingrediente(String nomeIngrediente, String quantidadeIngrediente) {
         this.nomeIngrediente = nomeIngrediente;
-        this.pesoEmGramas = pesoEmGramas;
+        this.quantidadeIngrediente = quantidadeIngrediente;
     }
     //Getters e Setters
 
@@ -23,10 +23,10 @@ public class Ingrediente {
         this.nomeIngrediente = nomeIngrediente;
     }
 
-    public double getPesoEmGramas() {
-        return pesoEmGramas;
+    public String getPesoEmGramas() {
+        return quantidadeIngrediente;
     }
-    public void setPesoEmGramas(double pesoEmGramas) {
-        this.pesoEmGramas = pesoEmGramas;
+    public void setPesoEmGramas(String pesoEmGramas) {
+        this.quantidadeIngrediente = pesoEmGramas;
     }
 }
