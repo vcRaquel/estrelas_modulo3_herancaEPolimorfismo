@@ -19,6 +19,7 @@ public class Ingrediente {
     public String getNomeIngrediente() {
         return nomeIngrediente;
     }
+
     public void setNomeIngrediente(String nomeIngrediente) {
         this.nomeIngrediente = nomeIngrediente;
     }
@@ -26,7 +27,18 @@ public class Ingrediente {
     public String getPesoEmGramas() {
         return quantidadeIngrediente;
     }
+
     public void setPesoEmGramas(String pesoEmGramas) {
         this.quantidadeIngrediente = pesoEmGramas;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder retorno = new StringBuilder();
+        retorno.append("\n Nome do ingrediente: " + nomeIngrediente);
+        retorno.append("\n Quantidade do ingrediente: " + quantidadeIngrediente);
+        retorno.append("\n ---------------------------------------------- \n");
+
+        return retorno.toString();
     }
 }

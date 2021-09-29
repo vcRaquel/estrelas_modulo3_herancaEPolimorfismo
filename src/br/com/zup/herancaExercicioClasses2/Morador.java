@@ -1,49 +1,38 @@
 package br.com.zup.herancaExercicioClasses2;
 
 public class Morador extends Pessoa {
-    private String imovel;
-    private boolean locatario;
+    private String telefone;
+    private double renda;
 
-    //Métodos construtores
-    public Morador() {
-
-    }
-    public Morador(String nome, String cpf, String telefone, String imovel, boolean locatario) {
-        super(nome, cpf, telefone);
-        this.imovel = imovel;
-        this.locatario = locatario;
+    public Morador(String nome, String cpf, String telefone, double renda) {
+        super(nome, cpf);
+        this.telefone = telefone;
+        this.renda = renda;
     }
 
-    //Getters e Setters
-
-    public String getImovel() {
-        return imovel;
+    public String getTelefone() {
+        return telefone;
     }
 
-    public void setImovel(String imovel) {
-        this.imovel = imovel;
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
     }
 
-    public boolean isLocatario() {
-        return locatario;
+    public double getRenda() {
+        return renda;
     }
 
-    public void setLocatario(boolean locatario) {
-        this.locatario = locatario;
+    public void setRenda(double renda) {
+        this.renda = renda;
     }
 
     @Override
     public String toString() {
-        StringBuilder imprimeMorador = new StringBuilder();
-        imprimeMorador.append("\n O nome do morador: " + getNome());
-        imprimeMorador.append("\n CPF: " + getCpf());
-        imprimeMorador.append("\n Telefone: " + getTelefone());
-        imprimeMorador.append("\n Imóvel: " + imovel);
-        imprimeMorador.append("\n Locatário: " + locatario);
-        imprimeMorador.append("\n------------------------------------------------------------\n");
-
-
-        return imprimeMorador.toString();
+        StringBuilder retorno = new StringBuilder();
+        retorno.append(super.toString());
+        retorno.append("\n Telefone: " +telefone);
+        retorno.append("\n Renda do morador: R$"+renda);
+        return retorno.toString();
     }
 }
 

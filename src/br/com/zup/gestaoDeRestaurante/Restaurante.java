@@ -21,5 +21,12 @@ public class Restaurante {
         cardapio.add(novoPrato);
     }
 
-
+    @Override
+    public String toString() {
+        StringBuilder retorno = new StringBuilder();
+        retorno.append("Quantidade de pratos: " + cardapio.size());
+        retorno.append("Pratos: ");
+        retorno.append("\n" + cardapio);
+        return retorno.toString();
+    }
 }

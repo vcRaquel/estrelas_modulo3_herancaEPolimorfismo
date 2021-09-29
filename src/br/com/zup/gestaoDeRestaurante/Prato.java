@@ -41,6 +41,15 @@ public class Prato {
         this.valor = valor;
     }
 
+    @Override
+    public String toString() {
+        StringBuilder retorno = new StringBuilder();
+        retorno.append("\n Nome do prato: " + nome);
+        retorno.append("\n Valor do prato: " + valor);
+        retorno.append("\n Ingredientes do prato: " + ingredientes);
+        return retorno.toString();
+    }
+
     //Método para adicionar um ingrediente
     public void adicionarIngrediente(Ingrediente novoIngrediente) {
         ingredientes.add(novoIngrediente);
